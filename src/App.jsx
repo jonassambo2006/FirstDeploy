@@ -7,7 +7,7 @@ function Home() {
   return (
     <div className="container py-5 fade-section">
       <div className="text-center">
-        <h1 className="display-4 fw-bold text-accent mb-3">Hi! I'm Jonas Clarence M. Sambo</h1>
+        <h1 className="display-4 fw-bold text-accent mb-3">Hello! I'm Jonas Clarence M. Sambo</h1>
         <p className="lead text-light mb-4">
           Aspiring <strong>Web Developer</strong> & <strong>Network Specialist</strong> passionate
           about technology, creativity, and continuous learning.
