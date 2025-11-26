@@ -214,7 +214,7 @@ export default function App() {
       <nav className="navbar navbar-expand-lg navbar-dark glass-nav sticky-top">
         <div className="container">
           <span className="navbar-brand fw-bold text-accent">
-            <i className="fas fa-code me-2"></i>My Portfolio
+            <i className="fas fa-code me-2"></i>JC PORTFOLIO
           </span>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
             <span className="navbar-toggler-icon"></span>
