@@ -1,0 +1,256 @@
+/* =========================
+   🌈 GLOBAL STYLES
+========================= */
+body {
+  background: linear-gradient(-45deg, #0a0a0a, #001f2f, #004d40, #00e5ff);
+  background-size: 400% 400%;
+  animation: gradientWave 18s ease infinite;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 🌊 Moving gradient animation */
+@keyframes gradientWave {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* =========================
+   🎨 NAVBAR
+========================= */
+.navbar {
+  background: rgba(0, 0, 0, 0.7);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 20px rgba(0, 255, 255, 0.1);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  color: #00e5ff !important;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+  color: #00ffea !important;
+}
+
+.nav-link {
+  color: #ccc !important;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #00e5ff !important;
+}
+
+/* =========================
+   🏠 HOME SECTION
+========================= */
+.fade-section {
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.hero-section {
+  background: rgb(251, 251, 251);
+  padding: 100px 0;
+  text-align: center;
+  border-radius: 20px;
+  margin: 30px auto;
+  max-width: 90%;
+  box-shadow: 0 0 40px rgba(0, 255, 255, 0.15);
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #00e5ff;
+  margin-bottom: 15px;
+}
+
+.hero-subtitle {
+  color: #ddd;
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+}
+
+/* =========================
+   💼 PORTFOLIO CARDS (Neon Glow)
+========================= */
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.05);
+  transition: transform 0.4s ease, box-shadow 0.5s ease, border 0.5s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Neon glow effect */
+.card:hover {
+  transform: translateY(-10px) scale(1.02);
+  border: 1px solid rgba(0, 255, 255, 0.7);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.6),
+              0 0 45px rgba(0, 150, 255, 0.4),
+              0 0 70px rgba(0, 255, 150, 0.3);
+  animation: neonGlow 3s linear infinite;
+}
+
+/* Animated neon light flow */
+@keyframes neonGlow {
+  0% {
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.6),
+                0 0 45px rgba(0, 150, 255, 0.4),
+                0 0 70px rgba(0, 255, 150, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 35px rgba(0, 255, 255, 0.8),
+                0 0 55px rgba(0, 255, 180, 0.5),
+                0 0 85px rgba(0, 255, 255, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.6),
+                0 0 45px rgba(0, 150, 255, 0.4),
+                0 0 70px rgba(0, 255, 150, 0.3);
+  }
+}
+
+.card-title {
+  color: #00e5ff;
+  font-weight: 600;
+}
+
+/* =========================
+   ⚡ GLOWING GRADIENT BUTTON (With Soft Pulse + Ripple)
+========================= */
+.glow-btn {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(90deg, #00e5ff, #00bcd4, #4caf50);
+  background-size: 300% 100%;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 12px 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  box-shadow: 0 0 18px rgba(0, 229, 255, 0.6);
+  animation: gradientShift 4s ease infinite, softPulse 2.5s ease-in-out infinite;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glow-btn:hover {
+  transform: translateY(-3px) scale(1.08);
+  box-shadow: 0 0 35px rgba(0, 255, 255, 0.9);
+}
+
+/* Ripple Effect */
+.glow-btn::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: width 0.5s ease, height 0.5s ease, opacity 0.6s ease;
+}
+
+.glow-btn:active::after {
+  width: 250%;
+  height: 250%;
+  opacity: 0;
+  transition: 0s;
+}
+
+/* Background gradient animation */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Soft glowing pulse animation */
+@keyframes softPulse {
+  0%, 100% {
+    box-shadow: 0 0 18px rgba(0, 229, 255, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 28px rgba(0, 255, 255, 1);
+  }
+}
+
+/* =========================
+   🌟 ANIMATIONS
+========================= */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeSlide {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Utility for fade-in animations */
+.fade-slide {
+  animation: fadeSlide 0.8s ease-in-out;
+}
+
+/* =========================
+   📱 RESPONSIVE DESIGN
+========================= */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .glow-btn {
+    padding: 10px 25px;
+    font-size: 0.9rem;
+  }
+}
